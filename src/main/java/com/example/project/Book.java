@@ -2,29 +2,68 @@ package com.example.project;
 
 public class Book{
     //requires 5 attributes String title, String author, int yearPublished, String isbn, int quantity
-
+    private String title;
+    private String author;
+    private int yearPublished;
+    private String isbn;
+    private int quantity;
+    
     //requires 1 constructor with 5 arguments that intitialize the attribtues of the class.
+    public Book(String title, String author, int yearPublished, String isbn, int quantity){
+        this.title = title;
+        this.author = author;
+        this.yearPublished = yearPublished;
+        this.isbn = isbn;
+        this.quantity = quantity;
+    }
+    public String getTitle() {
+        return title;
+    }
 
-    // public  getTitle() {}
+     public void setTitle(String newTitle) {
+        this.title = newTitle;
+    }
 
-    // public setTitle() {}
+    public String getAuthor() {
+        return author;
+    }
 
-    // public getAuthor() {}
+    public void setAuthor(String newAuthor) {
+        this.author = newAuthor;
+    }
 
-    // public setAuthor() {}
+     public int getYearPublished() {
+        return yearPublished;
+     }
 
-    // public getYearPublished() {}
+     public void setYearPublished(int newYearPublished) {
+        this.yearPublished = newYearPublished;
+     }
 
-    // public setYearPublished() {}
+     public String getIsbn() {
+        return isbn;
+     }
 
-    // public getIsbn() {}
+     public void setIsbn(String newIsbn) {
+        this.isbn = newIsbn;
+     }
+    
+     public int getQuantity() {
+        return quantity;
+     }
 
-    // public void setIsbn() {}
+     public void setQuantity(int newQuantity) {
+        this.quantity = newQuantity;
+     }
 
-    // public int getQuantity() {}
-
-    // public void setQuantity() {}
-
-    // public  bookInfo(){} //returns "Title: [], Author: [], Year: [], ISBN: [], Quantity: []"
+    public String bookInfo(){
+        String info = "";
+        info += "Title: " + title + ", ";
+        info += "Author: " + author + ", ";
+        info += "Year: " + yearPublished + ", ";
+        info += "ISBN: " + isbn + ", ";
+        info += "Quantity: " + quantity;
+        return info; //returns "Title: [], Author: [], Year: [], ISBN: [], Quantity: []"
+    } 
        
 }
