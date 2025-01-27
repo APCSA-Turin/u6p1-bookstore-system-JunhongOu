@@ -45,7 +45,7 @@ public class BookStore{
         User[] updatedUser = new User[users.length];
         int num = 0;
 
-        for (User user : users) {
+        for (User user : users){
             if (user != null){
                 updatedUser[num] = user; 
                 num++;
@@ -67,20 +67,20 @@ public class BookStore{
     public void insertBook(Book book, int index){
         Book[] updatedBook = new Book[books.length + 1];
 
-        if(index == updatedBook.length - 1){ //Determines if final index in updatedBook = index
-            for(int k = 0; k < books.length; k++){
+        if (index == updatedBook.length - 1){ //Determines if final index in updatedBook = index
+            for (int k = 0; k < books.length; k++){
                 updatedBook[k] = books[k];
             }
                 updatedBook[index] = book;
          }
         else{
-            for(int k = 0; k < index; k++){
+            for (int k = 0; k < index; k++){
                 updatedBook[k] = books[k];
             }
                     
             updatedBook[index] = book;
     
-            for(int y = index; y < books.length; y++){                
+            for (int y = index; y < books.length; y++){                
                 updatedBook[y + 1] = books[y];
             }
         }
@@ -91,9 +91,9 @@ public class BookStore{
     public void removeBook(Book book){ //removes a book from the book array
     boolean notInBookstore = false; //Boolean variable to change for varying book quantities
 
-       for(int k = 0; k <= books.length - 1; k++){ //For whether 0 is the amount of a specified book.
-            if(books[k] == book){
-                if(books[k].getQuantity() - 1 == 0){
+       for (int k = 0; k <= books.length - 1; k++){ //For whether 0 is the amount of a specified book.
+            if (books[k] == book){
+                if (books[k].getQuantity() - 1 == 0){
                     books[k] = null;
                     notInBookstore = true;
                 }
@@ -102,11 +102,11 @@ public class BookStore{
                 }
             }
     }
-        if(notInBookstore){ //if there is no books for the specified book, the specified book gets removed from the book array
+        if (notInBookstore){ //if there is no books for the specified book, the specified book gets removed from the book array
           Book[] updatedBook = new Book[books.length - 1];
           consolidateBooks();
           
-          for(int k = 0; k <= updatedBook.length - 1; k++){
+          for (int k = 0; k <= updatedBook.length - 1; k++){
             updatedBook[k] = books[k];
         }
         books = updatedBook;

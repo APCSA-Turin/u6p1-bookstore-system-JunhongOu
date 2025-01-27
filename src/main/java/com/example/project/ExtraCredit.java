@@ -79,8 +79,8 @@ public class ExtraCredit{
                     System.out.println("Enter name of Book: ");
                     String findBook = scan.nextLine();
 
-                    for(int k = 0; k < bookstore.books.length; k++){
-                        if(bookstore.books[k].getTitle().equals(findBook)){
+                    for (int k = 0; k < bookstore.books.length; k++){
+                        if (bookstore.books[k].getTitle().equals(findBook)){
                             System.out.println("Book Found");
                             System.out.println(bookstore.books[k].bookInfo());
                             break;
@@ -89,7 +89,7 @@ public class ExtraCredit{
                     break; //searches for the specified book, and prints out its information
                 
                 case 4:
-                    for(int k = 0; k < bookstore.books.length; k++){
+                    for (int k = 0; k < bookstore.books.length; k++){
                         System.out.println(bookstore.books[k].bookInfo());
                     }
                     break; //prints out information about all of the available books in the bookstore
@@ -106,8 +106,8 @@ public class ExtraCredit{
                     break; //New users gets added into the bookstore
                     
                 case 6:
-                    for(int k = 0; k < bookstore.users.length; k++){
-                        if(bookstore.users[k] == null){
+                    for (int k = 0; k < bookstore.users.length; k++){
+                        if (bookstore.users[k] == null){
                             break;
                         }
                         else{
