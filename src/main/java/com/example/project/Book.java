@@ -16,6 +16,7 @@ public class Book{
         this.isbn = isbn;
         this.quantity = quantity;
     }
+    
     public String getTitle() {
         return title;
     }
@@ -32,27 +33,27 @@ public class Book{
         this.author = newAuthor;
     }
 
-     public int getYearPublished() {
+    public int getYearPublished() {
         return yearPublished;
      }
 
-     public void setYearPublished(int newYearPublished) {
+    public void setYearPublished(int newYearPublished) {
         this.yearPublished = newYearPublished;
      }
 
-     public String getIsbn() {
+    public String getIsbn() {
         return isbn;
      }
 
-     public void setIsbn(String newIsbn) {
+    public void setIsbn(String newIsbn) {
         this.isbn = newIsbn;
      }
     
-     public int getQuantity() {
+    public int getQuantity() {
         return quantity;
      }
 
-     public void setQuantity(int newQuantity) {
+    public void setQuantity(int newQuantity) {
         this.quantity = newQuantity;
      }
 
