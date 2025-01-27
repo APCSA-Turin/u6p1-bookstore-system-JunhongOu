@@ -57,7 +57,7 @@ public class Book{
         this.quantity = newQuantity;
      }
 
-     /* getter and setter methods to contain information about each part of books */
+     /* getter and setter methods to contain information about books */
 
     public String bookInfo(){
         String info = "";

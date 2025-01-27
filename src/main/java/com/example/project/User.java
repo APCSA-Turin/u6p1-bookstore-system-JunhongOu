@@ -37,16 +37,15 @@ public class User{
     }
 
     public String bookListInfo(){ //returns information of the books
-        String info = "";
+        String information = "";
 
-        for (int k = 0; k < book.length; k++)
-        {
-            info += (book[k] == null) ? "empty\n" : "Title: " + book[k].getTitle() + ", "
+        for (int k = 0; k < book.length; k++){
+            information += (book[k] == null) ? "empty\n" : "Title: " + book[k].getTitle() + ", "
             + "Author: " + book[k].getAuthor() + ", " + "Year: " + book[k].getYearPublished()
             + ", " + "ISBN: " + book[k].getIsbn() + ", " + "Quantity: " + book[k].getQuantity() + "\n"; 
         }
 
-        return info;
+        return information;
     } 
 
     public String userInfo(){ //returns the information of the user

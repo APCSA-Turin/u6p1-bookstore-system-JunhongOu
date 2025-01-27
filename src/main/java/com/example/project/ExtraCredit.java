@@ -26,9 +26,7 @@ public class ExtraCredit{
 
         while(!exit){
             Scanner scan = new Scanner(System.in);
-            
             userInterface();
-            
             System.out.println();
             int choices = scan.nextInt();
             scan.nextLine();
@@ -38,6 +36,7 @@ public class ExtraCredit{
                     exit = true;
                     scan.close();
                     break;
+                
                 case 1:
                     System.out.println("Enter Serial Number of Book: ");
                     String isbnBook = scan.nextLine();
@@ -59,14 +58,13 @@ public class ExtraCredit{
                     Book book = new Book(nameBook, authorBook, publishYear, isbnBook, bookQuantity);
                     bookstore.addBook(book);
                     break; // adds the specified book to bookstore
-               
                 
                 case 2:
                     System.out.println("Enter name of Book to Upgrade Quantity: ");
                     String searchBook = scan.nextLine();
 
-                    for(int k = 0; k < bookstore.books.length; k++){
-                        if(bookstore.books[k].getTitle().equals(searchBook)){
+                    for (int k = 0; k < bookstore.books.length; k++){
+                        if (bookstore.books[k].getTitle().equals(searchBook)){
                             System.out.println("Upgrade Quantity by What Amount: ");
                             int quantity = scan.nextInt();
                             scan.nextLine();
@@ -77,7 +75,6 @@ public class ExtraCredit{
                     }
                     break; // more quantities of the specified book gets added
                     
-         
                 case 3:
                     System.out.println("Enter name of Book: ");
                     String findBook = scan.nextLine();
@@ -91,14 +88,12 @@ public class ExtraCredit{
                     }
                     break; //searches for the specified book, and prints out its information
                 
-
                 case 4:
                     for(int k = 0; k < bookstore.books.length; k++){
                         System.out.println(bookstore.books[k].bookInfo());
                     }
                     break; //prints out information about all of the available books in the bookstore
                 
-                    
                 case 5:
                     System.out.println("Username: ");
                     String username = scan.nextLine();
@@ -110,7 +105,6 @@ public class ExtraCredit{
                     bookstore.consolidateUsers();
                     break; //New users gets added into the bookstore
                     
-                
                 case 6:
                     for(int k = 0; k < bookstore.users.length; k++){
                         if(bookstore.users[k] == null){
@@ -123,12 +117,12 @@ public class ExtraCredit{
                     break; //Prints information about every user that is in the bookstore
                 }
                 
-            try{
+                try{
                     Thread.sleep(2000); 
-            } 
-            catch (InterruptedException e){
-                    System.out.println("Interrupted: " + e.getMessage());
-            } //Code to pause the program per 2 seconds
+                } 
+                    catch (InterruptedException e){
+                    System.out.println("Interrupted: " + e.getMessage());  //Code to pause the program per 2 seconds
+            }      
         }
     }
 }

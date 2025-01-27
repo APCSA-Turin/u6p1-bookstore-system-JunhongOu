@@ -105,13 +105,14 @@ public class BookStore{
         if(notInBookstore){ //if there is no books for the specified book, the specified book gets removed from the book array
           Book[] updatedBook = new Book[books.length - 1];
           consolidateBooks();
+          
           for(int k = 0; k <= updatedBook.length - 1; k++){
             updatedBook[k] = books[k];
         }
         books = updatedBook;
     }
-        else{
-        consolidateBooks();
+          else{
+          consolidateBooks();
     }
   }
     
@@ -120,8 +121,8 @@ public class BookStore{
         User[] updatedBook = new User[books.length];
         int num = 0;
 
-        for (Book book : books) {
-            if (book != null) {
+        for (Book book : books){
+            if (book != null){
                 books[num] = book; //brings all null values to the end for books array
                 num++;
             }
