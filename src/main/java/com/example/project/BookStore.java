@@ -32,9 +32,9 @@ public class BookStore{
     } 
 
     public void removeUser(User user){ //removes an user from users, puts detected null value to the end of users array
-        for(int i = 0; i < users.length; i++){
-            if(users[i] == user){
-                users[i] = null;
+        for (int k = 0; k < users.length; k++){
+            if(users[k] == user){
+                users[k] = null;
                 consolidateUsers();
                 break;
             }
@@ -42,17 +42,17 @@ public class BookStore{
     }
 
     public void consolidateUsers(){ //Puts every value of null onto the end of the users array
-        User[] newUser = new User[users.length];
-        int i = 0;
+        User[] updatedUser = new User[users.length];
+        int num = 0;
 
         for (User user : users) {
             if (user != null){
-                newUser[i] = user; 
-                i++;
+                updatedUser[num] = user; 
+                num++;
             }
         }
 
-        users = newUser;  
+        users = updatedUser;  
     }
     public void addBook(Book book){ //Adds a new book onto the books array
         Book[] updatedBook = new Book[books.length + 1];
@@ -117,17 +117,16 @@ public class BookStore{
     
     public void consolidateBooks()
     {
-        User[] newBook = new User[books.length];
-        int i = 0;
+        User[] updatedBook = new User[books.length];
+        int num = 0;
 
         for (Book book : books) {
             if (book != null) {
-                books[i] = book; 
-                i++;
+                books[num] = book; //brings all null values to the end for books array
+                num++;
             }
         }
 
-        users = newBook;  
-    }
-    //brings all null values to the end for books array
+        users = updatedBook;  
+    }  
 }
